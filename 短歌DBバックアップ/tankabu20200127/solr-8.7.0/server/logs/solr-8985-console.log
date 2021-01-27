@@ -1,0 +1,9 @@
+OpenJDK 64-Bit Server VM warning: Failed to reserve shared memory. (error = 12)
+OpenJDK 64-Bit Server VM warning: Failed to reserve shared memory. (error = 12)
+OpenJDK 64-Bit Server VM warning: Failed to reserve shared memory. (error = 12)
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00007f470a000000, 33554432, 0) failed; error='Not enough space' (errno=12)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 33554432 bytes for committing reserved memory.
+# An error report file with more information is saved as:
+# /var/www/html/solr-8.7.0/server/hs_err_pid22174.log

@@ -1,0 +1,364 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 33554432 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2916), pid=21977, tid=21981
+#
+# JRE version:  (11.0.9.1+12) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.9.1+12-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xms512m -Xmx512m -XX:+UseG1GC -XX:+PerfDisableSharedMem -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=250 -XX:+UseLargePages -XX:+AlwaysPreTouch -XX:+ExplicitGCInvokesConcurrent -Xlog:gc*:file=/var/www/html/solr-8.7.0/server/logs/solr_gc.log:time,uptime:filecount=9,filesize=20M -Dsolr.jetty.inetaccess.includes= -Dsolr.jetty.inetaccess.excludes= -Dsolr.log.dir=/var/www/html/solr-8.7.0/server/logs -Djetty.port=8985 -DSTOP.PORT=7985 -DSTOP.KEY=solrrocks -Duser.timezone=UTC -XX:-OmitStackTraceInFastThrow -Djetty.home=/var/www/html/solr-8.7.0/server -Dsolr.solr.home=/var/www/html/solr-8.7.0/server/solr -Dsolr.data.home= -Dsolr.install.dir=/var/www/html/solr-8.7.0 -Dsolr.default.confdir=/var/www/html/solr-8.7.0/server/solr/configsets/_default/conf -Xss256k -Dsolr.jetty.https.port=8985 -Dsolr.log.muteconsole -XX:OnOutOfMemoryError=/var/www/html/solr-8.7.0/bin/oom_solr.sh 8985 /var/www/html/solr-8.7.0/server/logs start.jar --module=http
+
+Host: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz, 1 cores, 983M, Amazon Linux release 2 (Karoo)
+Time: Mon Jan 11 14:10:36 2021 UTC elapsed time: 0.042330 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fee04027800):  JavaThread "Unknown thread" [_thread_in_vm, id=21981, stack(0x00007fee0ca7e000,0x00007fee0cabf000)]
+
+Stack: [0x00007fee0ca7e000,0x00007fee0cabf000],  sp=0x00007fee0cabd470,  free space=253k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xdf0b19]  VMError::report_and_die(int, char const*, char const*, __va_list_tag*, Thread*, unsigned char*, void*, void*, char const*, int, unsigned long)+0x379
+V  [libjvm.so+0xdf178b]  VMError::report_and_die(Thread*, char const*, int, unsigned long, VMErrorType, char const*, __va_list_tag*)+0x2b
+V  [libjvm.so+0x67b7a0]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*, ...)+0xd0
+V  [libjvm.so+0xbd8f50]  os::pd_commit_memory(char*, unsigned long, bool)+0xf0
+V  [libjvm.so+0xbd014f]  os::commit_memory(char*, unsigned long, bool)+0x1f
+V  [libjvm.so+0x75c9a3]  G1CMMarkStack::resize(unsigned long)+0x63
+V  [libjvm.so+0x76015c]  G1ConcurrentMark::G1ConcurrentMark(G1CollectedHeap*, G1RegionToSpaceMapper*, G1RegionToSpaceMapper*)+0x63c
+V  [libjvm.so+0x74e64b]  G1CollectedHeap::initialize()+0x61b
+V  [libjvm.so+0xdadc61]  Universe::initialize_heap()+0x41
+V  [libjvm.so+0xdadf16]  universe_init()+0x46
+V  [libjvm.so+0x834607]  init_globals()+0x57
+V  [libjvm.so+0xd87679]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x349
+V  [libjvm.so+0x8e7a01]  JNI_CreateJavaVM+0x51
+C  [libjli.so+0x4c9f]  JavaMain+0x8f
+C  [libjli.so+0x9199]  ThreadJavaMain+0x9
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000055bef2c18750, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00007fee04040800 GCTaskThread "GC Thread#0" [stack: 0x00007fee098df000,0x00007fee099df000] [id=21982]
+
+[error occurred during error reporting (printing all threads), id 0xb, SIGSEGV (0xb) at pc=0x00007fee0afd1c91]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007fee040266b0] Heap_lock - owner thread: 0x00007fee04027800
+
+Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: Non-zero based: 0x00000000e0000000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.008 Protecting memory [0x00007fee0ca7e000,0x00007fee0ca82000] with protection modes 0
+Event: 0.008 Loaded shared library /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libzip.so
+
+
+Dynamic libraries:
+e0000000-100000000 ---p 00000000 00:00 0 
+55bef0c82000-55bef0c83000 r-xp 00000000 ca:01 4618508                    /usr/lib/jvm/java-11-amazon-corretto.x86_64/bin/java
+55bef0e83000-55bef0e84000 r--p 00001000 ca:01 4618508                    /usr/lib/jvm/java-11-amazon-corretto.x86_64/bin/java
+55bef0e84000-55bef0e85000 rw-p 00002000 ca:01 4618508                    /usr/lib/jvm/java-11-amazon-corretto.x86_64/bin/java
+55bef2c14000-55bef2c35000 rw-p 00000000 00:00 0                          [heap]
+7fede0000000-7fede0021000 rw-p 00000000 00:00 0 
+7fede0021000-7fede4000000 ---p 00000000 00:00 0 
+7fede4000000-7fede4021000 rw-p 00000000 00:00 0 
+7fede4021000-7fede8000000 ---p 00000000 00:00 0 
+7fede8000000-7fede8021000 rw-p 00000000 00:00 0 
+7fede8021000-7fedec000000 ---p 00000000 00:00 0 
+7fedec651000-7fedec899000 rw-p 00000000 00:00 0 
+7fedec899000-7fedecc00000 rwxp 00000000 00:00 0 
+7fedecc00000-7fedece28000 ---p 00000000 00:00 0 
+7fedece28000-7feded200000 rwxp 00000000 00:00 0 
+7feded200000-7fedf4360000 ---p 00000000 00:00 0 
+7fedf4360000-7fedf4600000 rwxp 00000000 00:00 0 
+7fedf4600000-7fedfb899000 ---p 00000000 00:00 0 
+7fedfb899000-7fee04000000 r--s 00000000 ca:01 12908889                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/modules
+7fee04000000-7fee0405c000 rw-p 00000000 00:00 0 
+7fee0405c000-7fee08000000 ---p 00000000 00:00 0 
+7fee080b7000-7fee081fc000 rw-p 00000000 00:00 0 
+7fee081fc000-7fee081fd000 ---p 00000000 00:00 0 
+7fee081fd000-7fee082fe000 rw-p 00000000 00:00 0 
+7fee082fe000-7fee082ff000 ---p 00000000 00:00 0 
+7fee082ff000-7fee08400000 rw-p 00000000 00:00 0 
+7fee08400000-7fee09400000 ---p 00000000 00:00 0 
+7fee094dc000-7fee097dc000 ---p 00000000 00:00 0 
+7fee097dc000-7fee098dd000 rw-p 00000000 00:00 0 
+7fee098dd000-7fee098de000 ---p 00000000 00:00 0 
+7fee098de000-7fee099e4000 rw-p 00000000 00:00 0 
+7fee099e4000-7fee09aca000 ---p 00000000 00:00 0 
+7fee09aca000-7fee09ad1000 r-xp 00000000 ca:01 12908888                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libzip.so
+7fee09ad1000-7fee09cd0000 ---p 00007000 ca:01 12908888                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libzip.so
+7fee09cd0000-7fee09cd1000 r--p 00006000 ca:01 12908888                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libzip.so
+7fee09cd1000-7fee09cd2000 rw-p 00000000 00:00 0 
+7fee09cd2000-7fee09cec000 r-xp 00000000 ca:01 12908871                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libjimage.so
+7fee09cec000-7fee09eec000 ---p 0001a000 ca:01 12908871                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libjimage.so
+7fee09eec000-7fee09eee000 r--p 0001a000 ca:01 12908871                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libjimage.so
+7fee09eee000-7fee09eef000 rw-p 0001c000 ca:01 12908871                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libjimage.so
+7fee09eef000-7fee09f18000 r-xp 00000000 ca:01 12908868                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libjava.so
+7fee09f18000-7fee0a118000 ---p 00029000 ca:01 12908868                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libjava.so
+7fee0a118000-7fee0a119000 r--p 00029000 ca:01 12908868                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libjava.so
+7fee0a119000-7fee0a11a000 rw-p 0002a000 ca:01 12908868                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libjava.so
+7fee0a11a000-7fee0a11b000 rw-p 00000000 00:00 0 
+7fee0a11b000-7fee0a12c000 r-xp 00000000 ca:01 12908887                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libverify.so
+7fee0a12c000-7fee0a32b000 ---p 00011000 ca:01 12908887                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libverify.so
+7fee0a32b000-7fee0a32d000 r--p 00010000 ca:01 12908887                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/libverify.so
+7fee0a32d000-7fee0a32e000 rw-p 00000000 00:00 0 
+7fee0a32e000-7fee0a335000 r-xp 00000000 ca:01 69130                      /usr/lib64/librt-2.26.so
+7fee0a335000-7fee0a534000 ---p 00007000 ca:01 69130                      /usr/lib64/librt-2.26.so
+7fee0a534000-7fee0a535000 r--p 00006000 ca:01 69130                      /usr/lib64/librt-2.26.so
+7fee0a535000-7fee0a536000 rw-p 00007000 ca:01 69130                      /usr/lib64/librt-2.26.so
+7fee0a536000-7fee0a675000 r-xp 00000000 ca:01 69114                      /usr/lib64/libm-2.26.so
+7fee0a675000-7fee0a874000 ---p 0013f000 ca:01 69114                      /usr/lib64/libm-2.26.so
+7fee0a874000-7fee0a875000 r--p 0013e000 ca:01 69114                      /usr/lib64/libm-2.26.so
+7fee0a875000-7fee0a876000 rw-p 0013f000 ca:01 69114                      /usr/lib64/libm-2.26.so
+7fee0a876000-7fee0b966000 r-xp 00000000 ca:01 12908895                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/server/libjvm.so
+7fee0b966000-7fee0bb65000 ---p 010f0000 ca:01 12908895                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/server/libjvm.so
+7fee0bb65000-7fee0bc24000 r--p 010ef000 ca:01 12908895                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/server/libjvm.so
+7fee0bc24000-7fee0bc5d000 rw-p 011ae000 ca:01 12908895                   /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/server/libjvm.so
+7fee0bc5d000-7fee0bcb4000 rw-p 00000000 00:00 0 
+7fee0bcb4000-7fee0be55000 r-xp 00000000 ca:01 69108                      /usr/lib64/libc-2.26.so
+7fee0be55000-7fee0c055000 ---p 001a1000 ca:01 69108                      /usr/lib64/libc-2.26.so
+7fee0c055000-7fee0c059000 r--p 001a1000 ca:01 69108                      /usr/lib64/libc-2.26.so
+7fee0c059000-7fee0c05b000 rw-p 001a5000 ca:01 69108                      /usr/lib64/libc-2.26.so
+7fee0c05b000-7fee0c05f000 rw-p 00000000 00:00 0 
+7fee0c05f000-7fee0c062000 r-xp 00000000 ca:01 69112                      /usr/lib64/libdl-2.26.so
+7fee0c062000-7fee0c261000 ---p 00003000 ca:01 69112                      /usr/lib64/libdl-2.26.so
+7fee0c261000-7fee0c262000 r--p 00002000 ca:01 69112                      /usr/lib64/libdl-2.26.so
+7fee0c262000-7fee0c263000 rw-p 00003000 ca:01 69112                      /usr/lib64/libdl-2.26.so
+7fee0c263000-7fee0c272000 r-xp 00000000 ca:01 5715677                    /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/jli/libjli.so
+7fee0c272000-7fee0c472000 ---p 0000f000 ca:01 5715677                    /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/jli/libjli.so
+7fee0c472000-7fee0c473000 r--p 0000f000 ca:01 5715677                    /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/jli/libjli.so
+7fee0c473000-7fee0c474000 rw-p 00010000 ca:01 5715677                    /usr/lib/jvm/java-11-amazon-corretto.x86_64/lib/jli/libjli.so
+7fee0c474000-7fee0c48c000 r-xp 00000000 ca:01 69126                      /usr/lib64/libpthread-2.26.so
+7fee0c48c000-7fee0c68c000 ---p 00018000 ca:01 69126                      /usr/lib64/libpthread-2.26.so
+7fee0c68c000-7fee0c68d000 r--p 00018000 ca:01 69126                      /usr/lib64/libpthread-2.26.so
+7fee0c68d000-7fee0c68e000 rw-p 00019000 ca:01 69126                      /usr/lib64/libpthread-2.26.so
+7fee0c68e000-7fee0c692000 rw-p 00000000 00:00 0 
+7fee0c692000-7fee0c6a6000 r-xp 00000000 ca:01 69183                      /usr/lib64/libz.so.1.2.7
+7fee0c6a6000-7fee0c8a5000 ---p 00014000 ca:01 69183                      /usr/lib64/libz.so.1.2.7
+7fee0c8a5000-7fee0c8a6000 r--p 00013000 ca:01 69183                      /usr/lib64/libz.so.1.2.7
+7fee0c8a6000-7fee0c8a7000 rw-p 00014000 ca:01 69183                      /usr/lib64/libz.so.1.2.7
+7fee0c8a7000-7fee0c8cb000 r-xp 00000000 ca:01 69101                      /usr/lib64/ld-2.26.so
+7fee0c96d000-7fee0c984000 rw-p 00000000 00:00 0 
+7fee0c984000-7fee0ca6a000 ---p 00000000 00:00 0 
+7fee0ca6a000-7fee0ca6f000 rw-p 00000000 00:00 0 
+7fee0ca6f000-7fee0ca76000 ---p 00000000 00:00 0 
+7fee0ca76000-7fee0ca7e000 rw-p 00000000 00:00 0 
+7fee0ca7e000-7fee0ca82000 ---p 00000000 00:00 0 
+7fee0ca82000-7fee0cac3000 rw-p 00000000 00:00 0 
+7fee0cac8000-7fee0cac9000 ---p 00000000 00:00 0 
+7fee0cac9000-7fee0caca000 r--p 00000000 00:00 0 
+7fee0caca000-7fee0cacb000 r--p 00023000 ca:01 69101                      /usr/lib64/ld-2.26.so
+7fee0cacb000-7fee0cacc000 rw-p 00024000 ca:01 69101                      /usr/lib64/ld-2.26.so
+7fee0cacc000-7fee0cacd000 rw-p 00000000 00:00 0 
+7ffdc81a7000-7ffdc81c8000 rw-p 00000000 00:00 0                          [stack]
+7ffdc81ee000-7ffdc81f1000 r--p 00000000 00:00 0                          [vvar]
+7ffdc81f1000-7ffdc81f3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+VM Arguments:
+jvm_args: -Xms512m -Xmx512m -XX:+UseG1GC -XX:+PerfDisableSharedMem -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=250 -XX:+UseLargePages -XX:+AlwaysPreTouch -XX:+ExplicitGCInvokesConcurrent -Xlog:gc*:file=/var/www/html/solr-8.7.0/server/logs/solr_gc.log:time,uptime:filecount=9,filesize=20M -Dsolr.jetty.inetaccess.includes= -Dsolr.jetty.inetaccess.excludes= -Dsolr.log.dir=/var/www/html/solr-8.7.0/server/logs -Djetty.port=8985 -DSTOP.PORT=7985 -DSTOP.KEY=solrrocks -Duser.timezone=UTC -XX:-OmitStackTraceInFastThrow -Djetty.home=/var/www/html/solr-8.7.0/server -Dsolr.solr.home=/var/www/html/solr-8.7.0/server/solr -Dsolr.data.home= -Dsolr.install.dir=/var/www/html/solr-8.7.0 -Dsolr.default.confdir=/var/www/html/solr-8.7.0/server/solr/configsets/_default/conf -Xss256k -Dsolr.jetty.https.port=8985 -Dsolr.log.muteconsole -XX:OnOutOfMemoryError=/var/www/html/solr-8.7.0/bin/oom_solr.sh 8985 /var/www/html/solr-8.7.0/server/logs 
+java_command: start.jar --module=http
+java_class_path (initial): start.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     bool AlwaysPreTouch                           = true                                      {product} {command line}
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     bool ExplicitGCInvokesConcurrent              = true                                      {product} {command line}
+     uint G1ConcRefinementThreads                  = 1                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 536870912                                 {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+    uintx MaxGCPauseMillis                         = 250                                       {product} {command line}
+   size_t MaxHeapSize                              = 536870912                                 {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5825164                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916538                              {pd product} {ergonomic}
+     bool OmitStackTraceInFastThrow                = false                                     {product} {command line}
+ccstrlist OnOutOfMemoryError                       = /var/www/html/solr-8.7.0/bin/oom_solr.sh 8985 /var/www/html/solr-8.7.0/server/logs            {product} {command line}
+     bool ParallelRefProcEnabled                   = true                                      {product} {command line}
+     bool PerfDisableSharedMem                     = true                                      {product} {command line}
+    uintx ProfiledCodeHeapSize                     = 122916538                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     intx ThreadStackSize                          = 256                                    {pd product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {command line}
+     bool UseLargePages                            = true                                   {pd product} {command line}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+ #2: file=/var/www/html/solr-8.7.0/server/logs/solr_gc.log all=off,gc*=info time,uptime filecount=9,filesize=20480K (reconfigured)
+
+Environment Variables:
+PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin
+SHELL=/bin/bash
+LANG=en_US.UTF-8
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xdf2490], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xdf2490], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0xdf2490], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0xbd4a10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0xbd4a10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0xdf2490], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR2: [libjvm.so+0xbd48d0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Amazon Linux release 2 (Karoo)
+uname:Linux 4.14.209-160.339.amzn2.x86_64 #1 SMP Wed Dec 16 22:44:04 UTC 2020 x86_64
+OS uptime: 6 days 2:28 hours
+libc:glibc 2.26 NPTL 2.26 
+rlimit (soft/hard): STACK 10240k/10240k , CORE 0k/infinity , NPROC infinity/infinity , NOFILE 65535/65535 , AS infinity/infinity , CPU infinity/infinity , DATA infinity/infinity , FSIZE infinity/infinity , MEMLOCK infinity/infinity
+load average:0.00 0.00 0.00
+
+/proc/meminfo:
+MemTotal:        1006900 kB
+MemFree:           66448 kB
+MemAvailable:       9004 kB
+Buffers:               0 kB
+Cached:            14516 kB
+SwapCached:            0 kB
+Active:           863272 kB
+Inactive:           8404 kB
+Active(anon):     857640 kB
+Inactive(anon):      332 kB
+Active(file):       5632 kB
+Inactive(file):     8072 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                24 kB
+Writeback:             0 kB
+AnonPages:        857308 kB
+Mapped:             9848 kB
+Shmem:               672 kB
+Slab:              34128 kB
+SReclaimable:      14112 kB
+SUnreclaim:        20016 kB
+KernelStack:        4752 kB
+PageTables:        16288 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      503448 kB
+Committed_AS:    2438180 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       86016 kB
+DirectMap2M:      962560 kB
+
+/sys/kernel/mm/transparent_hugepage/enabled:
+always [madvise] never
+/sys/kernel/mm/transparent_hugepage/defrag (defrag/compaction efforts parameter):
+always defer defer+madvise [madvise] never
+
+/proc/sys/kernel/threads-max (system-wide limit on the number of threads):
+7698
+/proc/sys/vm/max_map_count (maximum number of memory map areas a process may have):
+65530
+/proc/sys/kernel/pid_max (system-wide limit on number of process identifiers):
+32768
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0
+cpu_memory_nodes: 0
+active_processor_count: 1
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -1
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 892772352
+memory_max_usage_in_bytes: 0
+
+Xen hardware-assisted virtualization detected
+Steal ticks since vm start: 0
+Steal ticks percentage since vm start:  0.000
+
+CPU:total 1 (initial active 1) (1 cores per cpu, 1 threads per core) family 6 model 63 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, tsc, bmi1, bmi2, fma
+CPU Model and flags from /proc/cpuinfo:
+model name	: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault invpcid_single pti fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+Online cpus:
+0
+Offline cpus:
+1-14
+BIOS frequency limitation:
+<Not Available>
+Frequency switch latency (ns):
+<Not Available>
+Available cpu frequencies:
+<Not Available>
+Current governor:
+<Not Available>
+Core performance/turbo boost:
+<Not Available>
+
+Memory: 4k page, physical 1006900k(67936k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.9.1+12-LTS) for linux-amd64 JRE (11.0.9.1+12-LTS), built on Nov  4 2020 20:39:58 by "mockbuild" with gcc 7.3.1 20180712 (Red Hat 7.3.1-10)
+
+END.

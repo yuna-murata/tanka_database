@@ -1,0 +1,14 @@
+2021-01-24 14:24:06.848 INFO  (main) [   ] o.e.j.u.log Logging initialized @21808ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-24 14:24:07.360 WARN  (main) [   ] o.e.j.s.AbstractConnector Ignoring deprecated socket close linger time
+2021-01-24 14:24:07.360 WARN  (main) [   ] o.e.j.x.XmlConfiguration Deprecated method public void org.eclipse.jetty.server.ServerConnector.setSoLingerTime(int) in file:///C:/Users/kakum/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/website/tanka_murata/solr-8.4.1/server/etc/jetty-http.xml
+2021-01-24 14:24:07.372 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.19.v20190610; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_231-b11
+2021-01-24 14:24:07.424 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///C:/Users/kakum/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/website/tanka_murata/solr-8.4.1/server/contexts/] at interval 0
+2021-01-24 14:24:39.543 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2021-01-24 14:24:39.575 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2021-01-24 14:24:39.575 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2021-01-24 14:24:39.587 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
+2021-01-24 14:24:39.858 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2021-01-24 14:24:39.867 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 8.4.1
+2021-01-24 14:24:39.867 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2021-01-24 14:24:39.867 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Users\kakum\OneDrive\デスクトップ\website\tanka_murata\solr-8.4.1
+2021-01-24 14:24:39.872 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-24T14:24:39.869Z

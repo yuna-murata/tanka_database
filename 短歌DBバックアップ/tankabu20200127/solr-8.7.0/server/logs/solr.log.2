@@ -1,0 +1,233 @@
+2021-01-11 14:35:51.561 INFO  (main) [   ] o.e.j.u.log Logging initialized @2401ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-11 14:35:51.716 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+    <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
+        <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
+      </Arg></New>
+  </Arg>
+2021-01-11 14:35:52.091 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.9.1+12-LTS
+2021-01-11 14:35:52.125 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///var/www/html/solr-8.7.0/server/contexts/] at interval 0
+2021-01-11 14:35:52.839 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2021-01-11 14:35:52.861 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2021-01-11 14:35:52.864 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2021-01-11 14:35:52.874 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2021-01-11 14:35:53.013 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2021-01-11 14:35:53.029 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.7.0
+2021-01-11 14:35:53.030 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2021-01-11 14:35:53.031 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /var/www/html/solr-8.7.0
+2021-01-11 14:35:53.032 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-11T14:35:53.032263Z
+2021-01-11 14:35:53.135 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /var/www/html/solr-8.7.0/server/solr
+2021-01-11 14:35:53.146 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /var/www/html/solr-8.7.0/server/solr/solr.xml
+2021-01-11 14:35:53.402 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1, but no JMX reporters were configured - adding default JMX reporter.
+2021-01-11 14:35:54.835 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2021-01-11 14:35:55.217 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@38792286[provider=null,keyStore=null,trustStore=null]
+2021-01-11 14:35:55.220 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@38792286[provider=null,keyStore=null,trustStore=null]
+2021-01-11 14:35:55.613 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@2b6fcb9f[provider=null,keyStore=null,trustStore=null]
+2021-01-11 14:35:55.614 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@2b6fcb9f[provider=null,keyStore=null,trustStore=null]
+2021-01-11 14:35:55.744 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2021-01-11 14:35:56.109 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2021-01-11 14:35:56.113 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2021-01-11 14:35:56.278 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-11 14:35:56.283 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-11 14:35:56.299 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-11 14:35:56.378 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/www/html/solr-8.7.0/server/solr
+2021-01-11 14:35:56.379 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [mycore]
+2021-01-11 14:35:56.533 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.7.0
+2021-01-11 14:35:56.633 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@51a06cbe{/solr,file:///var/www/html/solr-8.7.0/server/solr-webapp/webapp/,AVAILABLE}{/var/www/html/solr-8.7.0/server/solr-webapp/webapp}
+2021-01-11 14:35:56.680 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@2f058b8a{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2021-01-11 14:35:56.681 INFO  (main) [   ] o.e.j.s.Server Started @7526ms
+2021-01-11 14:35:57.053 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.IndexSchema Schema name=default-config
+2021-01-11 14:35:58.540 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-01-11 14:35:58.634 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.c.CoreContainer Creating SolrCore 'mycore' using configuration from instancedir /var/www/html/solr-8.7.0/server/solr/mycore, trusted=true
+2021-01-11 14:35:58.692 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.mycore' (registry 'solr.core.mycore') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-11 14:35:58.724 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.c.SolrCore [[mycore] ] Opening new SolrCore at [/var/www/html/solr-8.7.0/server/solr/mycore], dataDir=[/var/www/html/solr-8.7.0/server/solr/mycore/data/]
+2021-01-11 14:35:59.968 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2021-01-11 14:35:59.968 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2021-01-11 14:35:59.992 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-01-11 14:35:59.994 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-01-11 14:36:00.202 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/www/html/solr-8.7.0/server/solr/mycore/conf
+2021-01-11 14:36:00.232 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-01-11 14:36:00.244 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-01-11 14:36:00.266 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-01-11 14:36:00.277 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1688601373208215552
+2021-01-11 14:36:00.288 INFO  (searcherExecutor-15-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-11 14:36:00.288 INFO  (searcherExecutor-15-thread-1-processing-x:mycore) [   x:mycore] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-01-11 14:36:00.311 INFO  (searcherExecutor-15-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.SolrCore [mycore]  Registered new searcher autowarm time: 0 ms
+2021-01-11 14:36:17.418 INFO  (qtp1557989809-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610375776870} status=0 QTime=0
+2021-01-11 14:36:17.458 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610375776870} status=0 QTime=52
+2021-01-11 14:36:17.617 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610375776870} status=0 QTime=12
+2021-01-11 14:36:24.831 INFO  (qtp1557989809-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610375776870} status=0 QTime=0
+2021-01-11 14:36:24.877 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610375776870} status=0 QTime=24
+2021-01-11 14:36:24.884 INFO  (qtp1557989809-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610375776870} status=0 QTime=27
+2021-01-11 14:36:25.039 INFO  (qtp1557989809-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610375776870} status=0 QTime=0
+2021-01-11 14:36:25.054 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610375776870} status=0 QTime=17
+2021-01-11 14:36:25.070 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610375776870} status=0 QTime=0
+2021-01-11 14:37:40.493 INFO  (qtp1557989809-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610375776870} status=0 QTime=22
+2021-01-11 14:38:08.305 INFO  (qtp1557989809-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610375776870} status=0 QTime=0
+2021-01-11 14:39:08.799 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610375776870} status=0 QTime=0
+2021-01-11 14:42:04.485 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/www/html/solr-8.7.0/server/solr/mycore/conf/managed-schema
+2021-01-11 14:42:06.321 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.u.p.LogUpdateProcessorFactory [mycore]  webapp=/solr path=/update/json/docs params={}{add=[1 (1688601755117420544), 2 (1688601755278901248), 3 (1688601755280998400), 4 (1688601755283095552), 5 (1688601755288338432), 6 (1688601755290435584), 7 (1688601755295678464), 9 (1688601755298824192), 10 (1688601755304067072), 11 (1688601755308261376), ... (3076 adds)]} 0 2264
+2021-01-11 14:42:07.011 INFO  (searcherExecutor-15-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-11 14:42:07.028 INFO  (searcherExecutor-15-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.SolrCore [mycore]  Registered new searcher autowarm time: 1 ms
+2021-01-11 14:42:07.043 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.u.p.LogUpdateProcessorFactory [mycore]  webapp=/solr path=/update params={commit=true}{commit=} 0 709
+2021-01-11 14:42:31.559 INFO  (qtp1557989809-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376151215} status=0 QTime=0
+2021-01-11 14:42:31.589 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610376151215} status=0 QTime=1
+2021-01-11 14:42:31.599 INFO  (qtp1557989809-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376151216} status=0 QTime=16
+2021-01-11 14:42:43.653 INFO  (qtp1557989809-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376151215} status=0 QTime=0
+2021-01-11 14:42:43.659 INFO  (qtp1557989809-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376151216} status=0 QTime=13
+2021-01-11 14:42:43.713 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376151216} status=0 QTime=20
+2021-01-11 14:42:47.672 INFO  (qtp1557989809-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376151215} status=0 QTime=0
+2021-01-11 14:42:47.680 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376151216} status=0 QTime=9
+2021-01-11 14:42:47.697 INFO  (qtp1557989809-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610376151215} status=0 QTime=1
+2021-01-11 14:42:47.745 INFO  (qtp1557989809-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610376151215} status=0 QTime=0
+2021-01-11 14:42:47.746 INFO  (qtp1557989809-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376151215} status=0 QTime=0
+2021-01-11 14:42:47.750 INFO  (qtp1557989809-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376151216} status=0 QTime=8
+2021-01-11 14:42:57.326 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:42:57.337 INFO  (qtp1557989809-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:42:57.345 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=17
+2021-01-11 14:43:38.037 INFO  (qtp1557989809-14) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1610376217757} status=0 QTime=1
+2021-01-11 14:43:38.038 INFO  (qtp1557989809-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:43:38.047 INFO  (qtp1557989809-22) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1610376217757} status=0 QTime=1
+2021-01-11 14:43:38.054 INFO  (qtp1557989809-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=13
+2021-01-11 14:43:38.068 INFO  (qtp1557989809-20) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1610376176975&ts=1610376176975} status=503 QTime=0
+2021-01-11 14:43:38.069 INFO  (qtp1557989809-16) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1610376217757} status=0 QTime=9
+2021-01-11 14:43:40.122 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:43:40.147 INFO  (qtp1557989809-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=6
+2021-01-11 14:44:18.921 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=author:"斎藤茂吉"&_=1610376219831} hits=832 status=0 QTime=131
+2021-01-11 14:44:22.528 INFO  (qtp1557989809-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:44:44.028 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610376151215} status=0 QTime=0
+2021-01-11 14:44:54.832 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376151215} status=0 QTime=0
+2021-01-11 14:45:21.365 INFO  (qtp1557989809-21) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1610376217757} status=0 QTime=16
+2021-01-11 14:45:29.178 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1610376217757} status=0 QTime=0
+2021-01-11 14:45:31.166 INFO  (qtp1557989809-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376151216} status=0 QTime=8
+2021-01-11 14:45:31.247 INFO  (qtp1557989809-16) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1610376176975&ts=1610376176975} status=503 QTime=0
+2021-01-11 14:45:32.060 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:45:37.544 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=5
+2021-01-11 14:46:09.886 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1610376217757} status=0 QTime=0
+2021-01-11 14:46:17.973 INFO  (qtp1557989809-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:46:17.976 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1610376217757} status=0 QTime=0
+2021-01-11 14:46:17.978 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1610376217757} status=0 QTime=0
+2021-01-11 14:46:17.981 INFO  (qtp1557989809-20) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1610376176975&ts=1610376176975} status=503 QTime=0
+2021-01-11 14:46:17.996 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1610376217757} status=0 QTime=17
+2021-01-11 14:46:17.997 INFO  (qtp1557989809-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=11
+2021-01-11 14:46:23.285 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:46:23.289 INFO  (qtp1557989809-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=11
+2021-01-11 14:47:07.149 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:47:07.158 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1610376217757} status=0 QTime=0
+2021-01-11 14:47:07.159 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1610376217757} status=0 QTime=0
+2021-01-11 14:47:07.181 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1610376176975&ts=1610376176975} status=503 QTime=0
+2021-01-11 14:47:07.183 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=16
+2021-01-11 14:47:07.185 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1610376217757} status=0 QTime=7
+2021-01-11 14:47:08.309 INFO  (qtp1557989809-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:47:08.314 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=6
+2021-01-11 14:47:09.115 INFO  (qtp1557989809-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:47:09.117 INFO  (qtp1557989809-22) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1610376217757} status=0 QTime=0
+2021-01-11 14:47:09.119 INFO  (qtp1557989809-14) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1610376217757} status=0 QTime=0
+2021-01-11 14:47:09.124 INFO  (qtp1557989809-21) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1610376217757} status=0 QTime=3
+2021-01-11 14:47:09.127 INFO  (qtp1557989809-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=7
+2021-01-11 14:47:09.128 INFO  (qtp1557989809-19) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1610376176975&ts=1610376176975} status=503 QTime=0
+2021-01-11 14:47:10.104 INFO  (qtp1557989809-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:47:10.109 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:47:10.116 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=8
+2021-01-11 14:47:11.286 INFO  (qtp1557989809-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:47:11.301 INFO  (qtp1557989809-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=11
+2021-01-11 14:47:11.348 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=7
+2021-01-11 14:47:15.074 INFO  (qtp1557989809-14) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1610376217757} status=0 QTime=0
+2021-01-11 14:47:15.075 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:47:15.081 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1610376217757} status=0 QTime=0
+2021-01-11 14:47:15.083 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1610376176975&ts=1610376176975} status=503 QTime=0
+2021-01-11 14:47:15.087 INFO  (qtp1557989809-22) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1610376217757} status=0 QTime=4
+2021-01-11 14:47:15.098 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=23
+2021-01-11 14:47:17.022 INFO  (qtp1557989809-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376176974} status=0 QTime=0
+2021-01-11 14:47:17.027 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376176975} status=0 QTime=4
+2021-01-11 14:47:32.513 INFO  (qtp1557989809-19) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=author:"斎藤茂吉"&_=1610376219831} hits=832 status=0 QTime=4
+2021-01-11 14:47:36.667 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=author:"斎藤茂吉"} hits=832 status=0 QTime=0
+2021-01-11 14:47:40.375 INFO  (qtp1557989809-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376459990} status=0 QTime=0
+2021-01-11 14:47:40.383 INFO  (qtp1557989809-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376459993} status=0 QTime=8
+2021-01-11 14:48:28.430 INFO  (qtp1557989809-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610376459993} status=0 QTime=19
+2021-01-11 14:50:41.804 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610376459990} status=0 QTime=0
+2021-01-11 14:59:54.127 INFO  (qtp1557989809-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610377193726} status=0 QTime=0
+2021-01-11 14:59:54.140 INFO  (qtp1557989809-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610377193727} status=0 QTime=8
+2021-01-11 15:01:28.827 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610377193726} status=0 QTime=0
+2021-01-11 15:02:24.361 INFO  (qtp1557989809-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610377193727} status=0 QTime=7
+2021-01-11 15:06:16.974 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/www/html/solr-8.7.0/server/solr/mycore/conf/managed-schema
+2021-01-11 15:06:17.017 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.7.0
+2021-01-11 15:06:17.313 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.s.IndexSchema Schema name=default-config
+2021-01-11 15:06:17.676 WARN  (qtp1557989809-17) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-01-11 15:06:17.677 WARN  (qtp1557989809-17) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-01-11 15:06:17.677 WARN  (qtp1557989809-17) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-01-11 15:06:17.677 WARN  (qtp1557989809-17) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-01-11 15:06:17.677 WARN  (qtp1557989809-17) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-01-11 15:06:17.734 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-01-11 15:06:17.769 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.c.CoreContainer Reloading SolrCore 'mycore' using configuration from instancedir /var/www/html/solr-8.7.0/server/solr/mycore
+2021-01-11 15:06:17.832 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.mycore' (registry 'solr.core.mycore') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-11 15:06:17.832 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.c.SolrCore [[mycore] ] Opening new SolrCore at [/var/www/html/solr-8.7.0/server/solr/mycore], dataDir=[/var/www/html/solr-8.7.0/server/solr/mycore/data/]
+2021-01-11 15:06:17.976 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-01-11 15:06:17.978 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-01-11 15:06:17.991 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/www/html/solr-8.7.0/server/solr/mycore/conf
+2021-01-11 15:06:17.993 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-01-11 15:06:17.993 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-01-11 15:06:17.994 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-01-11 15:06:18.028 INFO  (searcherExecutor-21-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-11 15:06:18.028 INFO  (searcherExecutor-21-thread-1-processing-x:mycore) [   x:mycore] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-01-11 15:06:18.036 INFO  (searcherExecutor-21-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.SolrCore [mycore]  Registered new searcher autowarm time: 0 ms
+2021-01-11 15:06:18.056 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-01-11 15:06:18.075 INFO  (searcherExecutor-21-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-11 15:06:18.078 INFO  (qtp1557989809-17) [   ] o.a.s.c.S.Request [mycore]  webapp=/solr path=/schema params={} status=0 QTime=1220
+2021-01-11 15:06:18.078 INFO  (qtp1557989809-17) [   ] o.a.s.c.SolrCore [mycore]  CLOSING SolrCore org.apache.solr.core.SolrCore@7c9c2f25
+2021-01-11 15:06:18.080 INFO  (searcherExecutor-21-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.SolrCore [mycore]  Registered new searcher autowarm time: 0 ms
+2021-01-11 15:06:18.080 INFO  (qtp1557989809-17) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.mycore tag=SolrCore@7c9c2f25
+2021-01-11 15:06:18.081 INFO  (qtp1557989809-17) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@712f1fbb: rootName = null, domain = solr.core.mycore, service url = null, agent id = null] for registry solr.core.mycore/com.codahale.metrics.MetricRegistry@653f8e89
+2021-01-11 15:07:36.187 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/www/html/solr-8.7.0/server/solr/mycore/conf/managed-schema
+2021-01-11 15:07:36.212 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.7.0
+2021-01-11 15:07:36.280 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.s.IndexSchema Schema name=default-config
+2021-01-11 15:07:36.540 WARN  (qtp1557989809-18) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-01-11 15:07:36.541 WARN  (qtp1557989809-18) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-01-11 15:07:36.541 WARN  (qtp1557989809-18) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-01-11 15:07:36.541 WARN  (qtp1557989809-18) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-01-11 15:07:36.543 WARN  (qtp1557989809-18) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-01-11 15:07:36.586 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-01-11 15:07:36.615 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.c.CoreContainer Reloading SolrCore 'mycore' using configuration from instancedir /var/www/html/solr-8.7.0/server/solr/mycore
+2021-01-11 15:07:36.668 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.mycore' (registry 'solr.core.mycore') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-11 15:07:36.668 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.c.SolrCore [[mycore] ] Opening new SolrCore at [/var/www/html/solr-8.7.0/server/solr/mycore], dataDir=[/var/www/html/solr-8.7.0/server/solr/mycore/data/]
+2021-01-11 15:07:36.785 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-01-11 15:07:36.785 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-01-11 15:07:36.790 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/www/html/solr-8.7.0/server/solr/mycore/conf
+2021-01-11 15:07:36.793 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-01-11 15:07:36.793 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-01-11 15:07:36.795 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-01-11 15:07:36.799 INFO  (searcherExecutor-26-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-11 15:07:36.799 INFO  (searcherExecutor-26-thread-1-processing-x:mycore) [   x:mycore] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-01-11 15:07:36.805 INFO  (searcherExecutor-26-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.SolrCore [mycore]  Registered new searcher autowarm time: 0 ms
+2021-01-11 15:07:36.821 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-01-11 15:07:36.825 INFO  (searcherExecutor-26-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-11 15:07:36.830 INFO  (qtp1557989809-18) [   ] o.a.s.c.S.Request [mycore]  webapp=/solr path=/schema params={} status=0 QTime=703
+2021-01-11 15:07:36.831 INFO  (qtp1557989809-18) [   ] o.a.s.c.SolrCore [mycore]  CLOSING SolrCore org.apache.solr.core.SolrCore@dccfbc8
+2021-01-11 15:07:36.831 INFO  (searcherExecutor-26-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.SolrCore [mycore]  Registered new searcher autowarm time: 0 ms
+2021-01-11 15:07:36.831 INFO  (qtp1557989809-18) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.mycore tag=SolrCore@dccfbc8
+2021-01-11 15:07:36.831 INFO  (qtp1557989809-18) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@2cd88213: rootName = null, domain = solr.core.mycore, service url = null, agent id = null] for registry solr.core.mycore/com.codahale.metrics.MetricRegistry@653f8e89
+2021-01-11 15:11:05.470 INFO  (qtp1557989809-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610377864895} status=0 QTime=0
+2021-01-11 15:11:05.486 INFO  (qtp1557989809-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610377864896} status=0 QTime=15
+2021-01-11 15:11:36.147 INFO  (qtp1557989809-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:"黒"&_=1610377865160} hits=0 status=0 QTime=5
+2021-01-11 15:11:47.097 INFO  (qtp1557989809-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:"黑"&_=1610377865160} hits=52 status=0 QTime=3
+2021-01-11 15:12:19.540 INFO  (qtp1557989809-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1610377864896} status=0 QTime=8
+2021-01-11 15:13:16.421 INFO  (qtp1557989809-22) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:"糸"&_=1610377865160} hits=0 status=0 QTime=1
+2021-01-11 15:13:32.643 INFO  (qtp1557989809-18) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:"絲"&_=1610377865160} hits=3 status=0 QTime=1
+2021-01-11 15:13:36.295 INFO  (qtp1557989809-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1610377864895} status=0 QTime=0
+2021-01-11 15:15:00.810 INFO  (qtp1557989809-16) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:"黒"&_=1610377865160} hits=0 status=0 QTime=0
+2021-01-11 15:15:17.965 INFO  (qtp1557989809-16) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:"黒"&_=1610377865160} hits=0 status=0 QTime=0
+2021-01-11 15:15:19.808 INFO  (qtp1557989809-16) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:"黒"&_=1610377865160} hits=0 status=0 QTime=0
+2021-01-11 15:15:35.537 INFO  (qtp1557989809-16) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:"黑"&_=1610377865160} hits=52 status=0 QTime=0
+2021-01-11 15:16:05.311 INFO  (ShutdownMonitor) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@2f058b8a{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2021-01-11 15:16:05.311 INFO  (ShutdownMonitor) [   ] o.e.j.s.session node0 Stopped scavenging
+2021-01-11 15:16:05.325 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1681215776
+2021-01-11 15:16:05.330 INFO  (coreCloseExecutor-31-thread-1) [   ] o.a.s.c.SolrCore [mycore]  CLOSING SolrCore org.apache.solr.core.SolrCore@30bf0ee2
+2021-01-11 15:16:05.330 INFO  (coreCloseExecutor-31-thread-1) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.mycore tag=SolrCore@30bf0ee2
+2021-01-11 15:16:05.330 INFO  (coreCloseExecutor-31-thread-1) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@62a6c8d9: rootName = null, domain = solr.core.mycore, service url = null, agent id = null] for registry solr.core.mycore/com.codahale.metrics.MetricRegistry@653f8e89
+2021-01-11 15:16:05.360 INFO  (coreCloseExecutor-31-thread-1) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2021-01-11 15:16:05.383 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2021-01-11 15:16:05.384 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@34585ac9: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@1a03d87e
+2021-01-11 15:16:05.388 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2021-01-11 15:16:05.388 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@5f5effb0: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@4ab8929e
+2021-01-11 15:16:05.389 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2021-01-11 15:16:05.389 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@25d0cb3a: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@316e6bae
+2021-01-11 15:16:05.412 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@51a06cbe{/solr,null,UNAVAILABLE}{/var/www/html/solr-8.7.0/server/solr-webapp/webapp}

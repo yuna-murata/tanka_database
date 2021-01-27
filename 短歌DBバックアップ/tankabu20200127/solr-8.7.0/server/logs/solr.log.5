@@ -1,0 +1,770 @@
+2021-01-26 09:30:03.023 INFO  (main) [   ] o.e.j.u.log Logging initialized @2892ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-26 09:30:03.225 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+    <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
+        <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
+      </Arg></New>
+  </Arg>
+2021-01-26 09:30:03.593 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.9.1+12-LTS
+2021-01-26 09:30:03.650 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///var/www/html/tanka/solr-8.7.0/server/contexts/] at interval 0
+2021-01-26 09:30:04.531 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2021-01-26 09:30:04.575 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2021-01-26 09:30:04.576 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2021-01-26 09:30:04.581 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2021-01-26 09:30:04.745 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2021-01-26 09:30:04.755 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.7.0
+2021-01-26 09:30:04.757 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2021-01-26 09:30:04.760 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /var/www/html/tanka/solr-8.7.0
+2021-01-26 09:30:04.761 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-26T09:30:04.761132Z
+2021-01-26 09:30:04.850 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /var/www/html/tanka/solr-8.7.0/server/solr
+2021-01-26 09:30:04.861 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /var/www/html/tanka/solr-8.7.0/server/solr/solr.xml
+2021-01-26 09:30:05.136 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1, but no JMX reporters were configured - adding default JMX reporter.
+2021-01-26 09:30:06.318 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2021-01-26 09:30:06.809 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@665522c2[provider=null,keyStore=null,trustStore=null]
+2021-01-26 09:30:06.809 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@665522c2[provider=null,keyStore=null,trustStore=null]
+2021-01-26 09:30:07.228 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@74170687[provider=null,keyStore=null,trustStore=null]
+2021-01-26 09:30:07.228 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@74170687[provider=null,keyStore=null,trustStore=null]
+2021-01-26 09:30:07.392 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2021-01-26 09:30:07.768 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2021-01-26 09:30:07.778 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2021-01-26 09:30:08.005 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-26 09:30:08.007 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-26 09:30:08.021 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-26 09:30:08.099 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/www/html/tanka/solr-8.7.0/server/solr
+2021-01-26 09:30:08.100 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [mycore]
+2021-01-26 09:30:08.300 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.7.0
+2021-01-26 09:30:08.437 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@49a64d82{/solr,file:///var/www/html/tanka/solr-8.7.0/server/solr-webapp/webapp/,AVAILABLE}{/var/www/html/tanka/solr-8.7.0/server/solr-webapp/webapp}
+2021-01-26 09:30:08.468 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@3f2ef586{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2021-01-26 09:30:08.469 INFO  (main) [   ] o.e.j.s.Server Started @8344ms
+2021-01-26 09:30:08.845 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.IndexSchema Schema name=default-config
+2021-01-26 09:30:10.046 WARN  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-01-26 09:30:10.047 WARN  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-01-26 09:30:10.047 WARN  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-01-26 09:30:10.047 WARN  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-01-26 09:30:10.048 WARN  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-01-26 09:30:10.438 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-01-26 09:30:10.547 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.c.CoreContainer Creating SolrCore 'mycore' using configuration from instancedir /var/www/html/tanka/solr-8.7.0/server/solr/mycore, trusted=true
+2021-01-26 09:30:10.614 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.mycore' (registry 'solr.core.mycore') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@1c93f6e1
+2021-01-26 09:30:10.643 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.c.SolrCore [[mycore] ] Opening new SolrCore at [/var/www/html/tanka/solr-8.7.0/server/solr/mycore], dataDir=[/var/www/html/tanka/solr-8.7.0/server/solr/mycore/data/]
+2021-01-26 09:30:12.054 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2021-01-26 09:30:12.056 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2021-01-26 09:30:12.110 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-01-26 09:30:12.110 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-01-26 09:30:12.470 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/www/html/tanka/solr-8.7.0/server/solr/mycore/conf
+2021-01-26 09:30:12.502 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-01-26 09:30:12.519 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-01-26 09:30:12.547 INFO  (coreLoadExecutor-13-thread-1) [   x:mycore] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-01-26 09:30:12.598 INFO  (searcherExecutor-15-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-26 09:30:12.598 INFO  (searcherExecutor-15-thread-1-processing-x:mycore) [   x:mycore] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-01-26 09:30:12.613 INFO  (searcherExecutor-15-thread-1-processing-x:mycore) [   x:mycore] o.a.s.c.SolrCore [mycore]  Registered new searcher autowarm time: 0 ms
+2021-01-26 09:53:36.285 INFO  (qtp2123222442-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611654815220} status=0 QTime=13
+2021-01-26 09:53:36.317 INFO  (qtp2123222442-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611654815223} status=0 QTime=49
+2021-01-26 09:53:36.452 INFO  (qtp2123222442-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611654815223} status=0 QTime=16
+2021-01-26 09:53:39.333 INFO  (qtp2123222442-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611654815220} status=0 QTime=0
+2021-01-26 09:53:39.352 INFO  (qtp2123222442-22) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1611654815224&ts=1611654815224} status=503 QTime=4
+2021-01-26 09:53:39.363 INFO  (qtp2123222442-20) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1611654818588} status=0 QTime=15
+2021-01-26 09:53:39.375 INFO  (qtp2123222442-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611654815223} status=0 QTime=38
+2021-01-26 09:53:39.377 INFO  (qtp2123222442-14) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1611654818588} status=0 QTime=30
+2021-01-26 09:53:39.381 INFO  (qtp2123222442-21) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1611654818588} status=0 QTime=35
+2021-01-26 09:54:13.231 INFO  (qtp2123222442-16) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1611654818588} status=0 QTime=2
+2021-01-26 09:54:17.943 INFO  (qtp2123222442-20) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1611654818588} status=0 QTime=15
+2021-01-26 09:55:08.147 INFO  (qtp2123222442-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611654815223} status=0 QTime=10
+2021-01-26 09:55:26.028 INFO  (qtp2123222442-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1611654818588} status=0 QTime=0
+2021-01-26 09:55:34.817 INFO  (qtp2123222442-14) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1611654815224&ts=1611654815224} status=503 QTime=0
+2021-01-26 09:56:26.435 INFO  (qtp2123222442-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611654815220} status=0 QTime=0
+2021-01-26 09:57:27.926 ERROR (qtp2123222442-20) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 09:57:27.927 INFO  (qtp2123222442-20) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=183
+2021-01-26 10:01:16.426 ERROR (qtp2123222442-20) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:01:16.426 INFO  (qtp2123222442-20) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=1
+2021-01-26 10:16:39.498 INFO  (qtp2123222442-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json} status=0 QTime=1
+2021-01-26 10:16:40.140 ERROR (qtp2123222442-17) [   x:mycore] o.a.s.h.SolrConfigHandler Error checking plugin :  => org.apache.solr.common.SolrException: Error loading class 'solr.VelocityResponseWriter'
+	at org.apache.solr.core.SolrResourceLoader.findClass(SolrResourceLoader.java:540)
+org.apache.solr.common.SolrException: Error loading class 'solr.VelocityResponseWriter'
+	at org.apache.solr.core.SolrResourceLoader.findClass(SolrResourceLoader.java:540) ~[?:?]
+	at org.apache.solr.core.SolrResourceLoader.findClass(SolrResourceLoader.java:469) ~[?:?]
+	at org.apache.solr.core.SolrCore.createInstance(SolrCore.java:838) ~[?:?]
+	at org.apache.solr.core.SolrCore.createInitInstance(SolrCore.java:894) ~[?:?]
+	at org.apache.solr.handler.SolrConfigHandler$Command.verifyClass(SolrConfigHandler.java:628) ~[?:?]
+	at org.apache.solr.handler.SolrConfigHandler$Command.updateNamedPlugin(SolrConfigHandler.java:590) ~[?:?]
+	at org.apache.solr.handler.SolrConfigHandler$Command.handleCommands(SolrConfigHandler.java:524) ~[?:?]
+	at org.apache.solr.handler.SolrConfigHandler$Command.handlePOST(SolrConfigHandler.java:377) ~[?:?]
+	at org.apache.solr.handler.SolrConfigHandler$Command.access$100(SolrConfigHandler.java:162) ~[?:?]
+	at org.apache.solr.handler.SolrConfigHandler.handleRequestBody(SolrConfigHandler.java:139) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345) ~[?:?]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596) ~[jetty-servlet-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545) ~[jetty-servlet-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590) ~[jetty-security-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485) ~[jetty-servlet-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.Server.handle(Server.java:500) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103) ~[jetty-io-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117) ~[jetty-io-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: java.lang.ClassNotFoundException: solr.VelocityResponseWriter
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:471) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:589) ~[?:?]
+	at java.net.FactoryURLClassLoader.loadClass(URLClassLoader.java:899) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:522) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:398) ~[?:?]
+	at org.apache.solr.core.SolrResourceLoader.findClass(SolrResourceLoader.java:524) ~[?:?]
+	... 52 more
+2021-01-26 10:16:40.153 ERROR (qtp2123222442-17) [   x:mycore] o.a.s.h.SolrConfigHandler ERROR:[{
+    "update-queryresponsewriter":{
+      "startup":"lazy",
+      "name":"velocity",
+      "class":"solr.VelocityResponseWriter",
+      "template.base.dir":"",
+      "solr.resource.loader.enabled":"true",
+      "params.resource.loader.enabled":"true"},
+    "errorMessages":["Error loading class 'solr.VelocityResponseWriter'"]}]
+2021-01-26 10:16:40.154 INFO  (qtp2123222442-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/config params={} status=400 QTime=26
+2021-01-26 10:25:19.839 ERROR (qtp2123222442-16) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:25:19.839 INFO  (qtp2123222442-16) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=2
+2021-01-26 10:25:22.596 ERROR (qtp2123222442-22) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:25:22.596 INFO  (qtp2123222442-22) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=1
+2021-01-26 10:28:03.624 ERROR (qtp2123222442-18) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:28:03.630 INFO  (qtp2123222442-18) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=7
+2021-01-26 10:28:35.929 INFO  (qtp2123222442-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=19
+2021-01-26 10:31:02.742 ERROR (qtp2123222442-18) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:31:02.745 INFO  (qtp2123222442-18) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=3
+2021-01-26 10:31:05.701 ERROR (qtp2123222442-23) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:31:05.706 INFO  (qtp2123222442-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=6
+2021-01-26 10:31:37.714 INFO  (qtp2123222442-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611657096788} status=0 QTime=0
+2021-01-26 10:31:37.736 INFO  (qtp2123222442-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657096789} status=0 QTime=28
+2021-01-26 10:31:37.937 INFO  (qtp2123222442-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657096789} status=0 QTime=15
+2021-01-26 10:31:40.214 INFO  (qtp2123222442-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611657096788} status=0 QTime=0
+2021-01-26 10:31:40.215 INFO  (qtp2123222442-19) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1611657099440} status=0 QTime=2
+2021-01-26 10:31:40.238 INFO  (qtp2123222442-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1611657099441} status=0 QTime=0
+2021-01-26 10:31:40.248 INFO  (qtp2123222442-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1611657096789&ts=1611657096789} status=503 QTime=0
+2021-01-26 10:31:40.257 INFO  (qtp2123222442-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657096789} status=0 QTime=20
+2021-01-26 10:31:40.258 INFO  (qtp2123222442-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1611657099440} status=0 QTime=9
+2021-01-26 10:31:43.549 INFO  (qtp2123222442-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611657096788} status=0 QTime=0
+2021-01-26 10:31:43.560 INFO  (qtp2123222442-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657096789} status=0 QTime=7
+2021-01-26 10:32:36.700 INFO  (qtp2123222442-22) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=author:"斎藤茂吉"&_=1611657102744} hits=832 status=0 QTime=47
+2021-01-26 10:32:47.388 INFO  (qtp2123222442-19) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=author:"斎藤茂吉"} hits=832 status=0 QTime=0
+2021-01-26 10:32:54.070 ERROR (qtp2123222442-20) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:32:54.070 INFO  (qtp2123222442-20) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=6
+2021-01-26 10:33:06.372 INFO  (qtp2123222442-22) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1611657099441} status=0 QTime=0
+2021-01-26 10:33:09.390 INFO  (qtp2123222442-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611657096788} status=0 QTime=0
+2021-01-26 10:33:13.260 INFO  (qtp2123222442-18) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1611657099440} status=0 QTime=0
+2021-01-26 10:33:16.015 INFO  (qtp2123222442-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657096789} status=0 QTime=8
+2021-01-26 10:34:17.155 INFO  (qtp2123222442-16) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1611657099440} status=0 QTime=11
+2021-01-26 10:34:20.509 INFO  (qtp2123222442-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1611657096789&ts=1611657096789} status=503 QTime=0
+2021-01-26 10:36:33.195 INFO  (qtp2123222442-23) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&rows=1000} hits=51 status=0 QTime=2
+2021-01-26 10:39:16.302 ERROR (qtp2123222442-19) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:39:16.302 INFO  (qtp2123222442-19) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=2
+2021-01-26 10:40:20.279 ERROR (qtp2123222442-20) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:40:20.279 INFO  (qtp2123222442-20) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=1
+2021-01-26 10:42:45.360 ERROR (qtp2123222442-17) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:42:45.360 INFO  (qtp2123222442-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=1
+2021-01-26 10:44:49.787 INFO  (qtp2123222442-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611657888785} status=0 QTime=0
+2021-01-26 10:44:49.802 INFO  (qtp2123222442-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657888786} status=0 QTime=8
+2021-01-26 10:44:49.997 INFO  (qtp2123222442-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657888786} status=0 QTime=9
+2021-01-26 10:45:33.143 INFO  (qtp2123222442-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657888786} status=0 QTime=14
+2021-01-26 10:46:11.995 ERROR (qtp2123222442-18) [   x:mycore] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "author_st"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1256)
+	at org.apache.solr.handler.component.PivotFacetProcessor.process(PivotFacetProcessor.java:95)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:280)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:360)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+2021-01-26 10:46:11.996 INFO  (qtp2123222442-18) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/select params={q=poet:赤&facet.pivot=author_st,title_st&fl=poet,author,title,id,year,group&start=0&rows=20&rows=20&facet=on&facet.sort=count} hits=51 status=400 QTime=1
+2021-01-26 10:46:16.037 INFO  (qtp2123222442-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611657888785} status=0 QTime=0
+2021-01-26 10:47:06.065 INFO  (qtp2123222442-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611657888785} status=0 QTime=0
+2021-01-26 10:47:06.079 INFO  (qtp2123222442-21) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1611658025248} status=0 QTime=0
+2021-01-26 10:47:06.088 INFO  (qtp2123222442-21) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/replication params={wt=json&command=details&_=1611658025249} status=0 QTime=3
+2021-01-26 10:47:06.094 INFO  (qtp2123222442-22) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1611658025249} status=0 QTime=8
+2021-01-26 10:47:06.095 INFO  (qtp2123222442-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1611657888787&ts=1611657888787} status=503 QTime=0
+2021-01-26 10:47:06.102 INFO  (qtp2123222442-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657888786} status=0 QTime=27
+2021-01-26 10:47:21.198 INFO  (qtp2123222442-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1611657888785} status=0 QTime=0
+2021-01-26 10:47:21.207 INFO  (qtp2123222442-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1611657888786} status=0 QTime=5
+2021-01-26 10:48:21.074 INFO  (qtp2123222442-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1611658025248} status=0 QTime=0
+2021-01-26 10:49:32.250 INFO  (qtp2123222442-17) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/system params={wt=json&_=1611658025249} status=0 QTime=12
+2021-01-26 10:49:35.239 INFO  (qtp2123222442-20) [   x:mycore] o.a.s.c.S.Request [mycore]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1611657888787&ts=1611657888787} status=503 QTime=0
+2021-01-26 10:54:20.432 INFO  (ShutdownMonitor) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@3f2ef586{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2021-01-26 10:54:20.432 INFO  (ShutdownMonitor) [   ] o.e.j.s.session node0 Stopped scavenging
+2021-01-26 10:54:20.447 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=870019773
+2021-01-26 10:54:20.453 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.c.SolrCore [mycore]  CLOSING SolrCore org.apache.solr.core.SolrCore@e7ad6c1
+2021-01-26 10:54:20.454 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.mycore tag=SolrCore@e7ad6c1
+2021-01-26 10:54:20.454 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@21cb071d: rootName = null, domain = solr.core.mycore, service url = null, agent id = null] for registry solr.core.mycore/com.codahale.metrics.MetricRegistry@39905356
+2021-01-26 10:54:20.545 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2021-01-26 10:54:20.574 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2021-01-26 10:54:20.574 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@15f35bc3: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@719ab43d
+2021-01-26 10:54:20.583 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2021-01-26 10:54:20.587 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@345cbf40: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@2c5a231b
+2021-01-26 10:54:20.592 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2021-01-26 10:54:20.592 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@6e3eb0cd: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@760998e7
+2021-01-26 10:54:20.617 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@49a64d82{/solr,null,UNAVAILABLE}{/var/www/html/tanka/solr-8.7.0/server/solr-webapp/webapp}

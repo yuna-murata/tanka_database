@@ -1,0 +1,72 @@
+2021-01-02 13:18:41.038 INFO  (main) [   ] o.e.j.u.log Logging initialized @2337ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-02 13:18:41.367 WARN  (main) [   ] o.e.j.s.AbstractConnector Ignoring deprecated socket close linger time
+2021-01-02 13:18:41.369 WARN  (main) [   ] o.e.j.x.XmlConfiguration Deprecated method public void org.eclipse.jetty.server.ServerConnector.setSoLingerTime(int) in file:///C:/Users/kakum/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/tanka_murata/solr-8.4.1/server/etc/jetty-http.xml
+2021-01-02 13:18:41.381 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.19.v20190610; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_231-b11
+2021-01-02 13:18:41.435 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///C:/Users/kakum/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/tanka_murata/solr-8.4.1/server/contexts/] at interval 0
+2021-01-02 13:18:42.560 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2021-01-02 13:18:42.577 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2021-01-02 13:18:42.578 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2021-01-02 13:18:42.581 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
+2021-01-02 13:18:42.706 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2021-01-02 13:18:42.713 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr? version 8.4.1
+2021-01-02 13:18:42.714 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2021-01-02 13:18:42.714 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1
+2021-01-02 13:18:42.717 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-02T13:18:42.715Z
+2021-01-02 13:18:42.753 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1\server\solr
+2021-01-02 13:18:42.762 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1\server\solr\solr.xml
+2021-01-02 13:18:42.907 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@e50a6f6, but no JMX reporters were configured - adding default JMX reporter.
+2021-01-02 13:18:43.660 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2021-01-02 13:18:44.427 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@1fcb4808[provider=null,keyStore=null,trustStore=null]
+2021-01-02 13:18:44.427 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@1fcb4808[provider=null,keyStore=null,trustStore=null]
+2021-01-02 13:18:44.619 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@4c168660[provider=null,keyStore=null,trustStore=null]
+2021-01-02 13:18:44.619 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@4c168660[provider=null,keyStore=null,trustStore=null]
+2021-01-02 13:18:44.655 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2021-01-02 13:18:44.982 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2021-01-02 13:18:44.985 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2021-01-02 13:18:45.099 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@e50a6f6
+2021-01-02 13:18:45.099 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@e50a6f6
+2021-01-02 13:18:45.106 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@e50a6f6
+2021-01-02 13:18:45.171 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1\server\solr
+2021-01-02 13:18:45.171 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [tanka4]
+2021-01-02 13:18:45.232 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.4.1
+2021-01-02 13:18:45.612 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.s.IndexSchema [tanka4] Schema name=default-config
+2021-01-02 13:18:46.543 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@649bec2e{/solr,file:///C:/Users/kakum/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/tanka_murata/solr-8.4.1/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1\server/solr-webapp/webapp}
+2021-01-02 13:18:46.571 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@4e08711f{HTTP/1.1,[http/1.1, h2c]}{0.0.0.0:8983}
+2021-01-02 13:18:46.571 INFO  (main) [   ] o.e.j.s.Server Started @7874ms
+2021-01-02 13:18:47.038 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-01-02 13:18:47.110 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.c.CoreContainer Creating SolrCore 'tanka4' using configuration from instancedir C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1\server\solr\tanka4, trusted=true
+2021-01-02 13:18:47.170 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.tanka4' (registry 'solr.core.tanka4') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@e50a6f6
+2021-01-02 13:18:47.208 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.c.SolrCore [[tanka4] ] Opening new SolrCore at [C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1\server\solr\tanka4], dataDir=[C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1\server\solr\tanka4\data\]
+2021-01-02 13:18:48.706 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2021-01-02 13:18:48.706 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2021-01-02 13:18:48.751 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-01-02 13:18:48.751 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-01-02 13:18:49.064 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.s.SolrIndexSearcher Opening [Searcher@107d8158[tanka4] main]
+2021-01-02 13:18:49.084 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1\server\solr\tanka4\conf
+2021-01-02 13:18:49.136 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-01-02 13:18:49.151 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-01-02 13:18:49.185 INFO  (coreLoadExecutor-9-thread-1) [   x:tanka4] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2021-01-02 13:18:49.333 INFO  (searcherExecutor-10-thread-1-processing-x:tanka4) [   x:tanka4] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@107d8158[tanka4] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1x(8.4.1):C25012/25002:[diagnostics={os=Windows 10, java.version=1.8.0_231, os.arch=amd64, java.runtime.version=1.8.0_231-b11, source=merge, os.version=10.0, java.vendor=Oracle Corporation, java.vm.version=25.231-b11, lucene.version=8.4.1, mergeMaxNumSegments=-1, mergeFactor=2, timestamp=1585653032559}]:[attributes={Lucene50StoredFieldsFormat.mode=BEST_SPEED}]:delGen=1) Uninverting(_1y(8.4.1):C25833:[diagnostics={java.vendor=Oracle Corporation, os=Windows 10, java.version=1.8.0_231, java.vm.version=25.231-b11, lucene.version=8.4.1, os.arch=amd64, java.runtime.version=1.8.0_231-b11, source=flush, os.version=10.0, timestamp=1585653076388}]:[attributes={Lucene50StoredFieldsFormat.mode=BEST_SPEED}])))}
+2021-01-02 13:18:49.333 INFO  (searcherExecutor-10-thread-1-processing-x:tanka4) [   x:tanka4] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-02 13:18:49.333 INFO  (searcherExecutor-10-thread-1-processing-x:tanka4) [   x:tanka4] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-01-02 13:18:49.353 INFO  (searcherExecutor-10-thread-1-processing-x:tanka4) [   x:tanka4] o.a.s.c.SolrCore [tanka4] Registered new searcher Searcher@107d8158[tanka4] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1x(8.4.1):C25012/25002:[diagnostics={os=Windows 10, java.version=1.8.0_231, os.arch=amd64, java.runtime.version=1.8.0_231-b11, source=merge, os.version=10.0, java.vendor=Oracle Corporation, java.vm.version=25.231-b11, lucene.version=8.4.1, mergeMaxNumSegments=-1, mergeFactor=2, timestamp=1585653032559}]:[attributes={Lucene50StoredFieldsFormat.mode=BEST_SPEED}]:delGen=1) Uninverting(_1y(8.4.1):C25833:[diagnostics={java.vendor=Oracle Corporation, os=Windows 10, java.version=1.8.0_231, java.vm.version=25.231-b11, lucene.version=8.4.1, os.arch=amd64, java.runtime.version=1.8.0_231-b11, source=flush, os.version=10.0, timestamp=1585653076388}]:[attributes={Lucene50StoredFieldsFormat.mode=BEST_SPEED}])))}
+2021-01-02 13:18:50.774 INFO  (qtp694316372-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=97
+2021-01-02 13:26:07.572 INFO  (qtp694316372-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609593967276} status=0 QTime=2
+2021-01-02 13:26:07.710 INFO  (qtp694316372-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609593967277} status=0 QTime=139
+2021-01-02 13:26:07.830 INFO  (qtp694316372-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609593967277} status=0 QTime=113
+2021-01-02 13:26:30.504 INFO  (qtp694316372-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609593990386} status=0 QTime=0
+2021-01-02 13:26:30.618 INFO  (qtp694316372-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609593990387} status=0 QTime=110
+2021-01-02 13:26:30.719 INFO  (qtp694316372-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609593990387} status=0 QTime=96
+2021-01-02 13:36:52.557 INFO  (ShutdownMonitor) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@4e08711f{HTTP/1.1,[http/1.1, h2c]}{0.0.0.0:8983}
+2021-01-02 13:36:52.557 INFO  (ShutdownMonitor) [   ] o.e.j.s.session node0 Stopped scavenging
+2021-01-02 13:36:52.563 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=872826668
+2021-01-02 13:36:52.568 INFO  (coreCloseExecutor-15-thread-1) [   x:tanka4] o.a.s.c.SolrCore [tanka4]  CLOSING SolrCore org.apache.solr.core.SolrCore@188dd0c5
+2021-01-02 13:36:52.568 INFO  (coreCloseExecutor-15-thread-1) [   x:tanka4] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.tanka4, tag=SolrCore@188dd0c5
+2021-01-02 13:36:52.569 INFO  (coreCloseExecutor-15-thread-1) [   x:tanka4] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@5a4f0851: rootName = null, domain = solr.core.tanka4, service url = null, agent id = null] for registry solr.core.tanka4 / com.codahale.metrics.MetricRegistry@20c5be1e
+2021-01-02 13:36:52.681 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2021-01-02 13:36:52.681 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@69c43e48: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node / com.codahale.metrics.MetricRegistry@2149fcd0
+2021-01-02 13:36:52.685 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2021-01-02 13:36:52.686 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@182b435b: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm / com.codahale.metrics.MetricRegistry@614d324b
+2021-01-02 13:36:52.688 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
+2021-01-02 13:36:52.688 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@4d0402b: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty / com.codahale.metrics.MetricRegistry@242046e3
+2021-01-02 13:36:52.715 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@649bec2e{/solr,null,UNAVAILABLE}{C:\Users\kakum\OneDrive\デスクトップ\tanka_murata\solr-8.4.1\server/solr-webapp/webapp}

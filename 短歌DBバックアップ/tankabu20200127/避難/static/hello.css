@@ -1,0 +1,50 @@
+.hello1 {
+    color: #f00;
+
+}
+
+.hitword{color:red}
+
+.jumbotron  { background:url("/static/shakko.jpg") center no-repeat;background-attachment: fixed;}
+
+
+.author_check label{ display: block;
+    float: left;
+    width: 110px;}
+
+
+.position select{
+        position:relative;
+        top:-50px;
+    }
+:root{
+    --font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, 'Open Sans', sans-serif;
+}
+
+
+
+.top-text {
+    color:#fff;
+    text-shadow: 1px 1px 0 #000,
+                 -1px 1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px -1px 0 #000;
+}
+/*
+svg {
+    display: inline-block;
+    width: 250px;
+    height: auto;
+    overflow: visible;
+  }
+  text {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 1;
+    stroke-linejoin: round;
+  }*/
